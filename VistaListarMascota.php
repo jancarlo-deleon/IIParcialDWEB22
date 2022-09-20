@@ -10,19 +10,23 @@
 <body>
 
 <!-- Barra de Navegacion> -->
-    <nav>
-        <ul>
-            <li> <a href="index.php">HOME</a></li>
-            <li> <a href="VistaAgregarMascota.php">Agregar Mascota</a></li>
-            <li> <a href="VistaListarMascota.php">Listar Mascota</a></li>
-        </ul>
-    </nav>
+<div>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="">HOME</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="VistaAgregarMascota.php">Agregar Mascota</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="VistaListarMascota.php">Listar Mascota</a></li>
+            </ul>
+
+        </nav>
+    </div>
 <!---------------------------------------------------------------------------->
 <div align="center">
         <div class="container-fluid" >
 
         <hr>
-        <h3 align="center">LISTADO DE MASCOTAS</h3>
+        <h1 align="center">LISTADO DE MASCOTAS</h1>
         <hr>
         <table border="1" class="table table-striped w-50 p-3"">
             <th style="text-align: center;">ID MASCOTA</th>

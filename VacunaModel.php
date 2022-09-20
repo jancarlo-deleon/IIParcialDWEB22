@@ -11,7 +11,7 @@ class Vacuna{
    /*CONEXION A LA BASE DE DATOS*/ 
    $nuevaConexion = new conexion();
    $ComandoConexion = $nuevaConexion->Conectar();
-   $ComandoConexion->query("insert into Vacunas (nombreVacuna,anio) values ("."'".$_POST['txtNombreVacuna'].','".$_POST['txtAnio']."',"'")" );
+   $ComandoConexion->query("insert into Vacunas (nombreVacuna,anio,idMascota) values("."'".$_POST['vacuna']."','".$_POST['anio']."',".$_POST['id'].")" );
 
    if(!$ComandoConexion)
    {

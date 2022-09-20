@@ -10,13 +10,17 @@
 <body>
 
 <!-- Barra de Navegacion> -->
-    <nav>
-        <ul>
-            <li> <a href="index.php">HOME</a></li>
-            <li> <a href="VistaAgregarMascota.php">Agregar Mascota</a></li>
-            <li> <a href="VistaListarMascota.php">Listar Mascota</a></li>
-        </ul>
-    </nav>
+<div>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="">HOME</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="VistaAgregarMascota.php">Agregar Mascota</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="VistaListarMascota.php">Listar Mascota</a></li>
+            </ul>
+
+        </nav>
+    </div>
 <!---------------------------------------------------------------------------->
 
    <form action="VacunaController.php" method="POST" >
@@ -26,7 +30,7 @@
                             include_once "MascotaModel.php";
                             $nuevaMascota = new Mascota();
                             /*FILTRAR A MASCOTA SEGUN ID ENVIADO*/
-                            $resultado = $nuevaMascota->FiltrarMascota($_GET['idMasc']);
+                            $resultado = $nuevaMascota->FiltrarMascota($_GET['idEst']);
 
                             while($resultadoFiltrado = mysqli_fetch_assoc($resultado))
                             {
@@ -38,18 +42,30 @@
                 </p>
                 <hr>
                 <form action="VacunaController.php" method="post">
-                    <p>
-                        <label for="txtNombreVacuna" class="form-label">Nombre de la Vacuna:</label > 
-                        <input type="text" name="txtNombreVacuna" class="form-control">
-                    </p>
-                    <p>
-                        <label for="txtAnio" class="form-label">Año:</label > 
-                        <input type="text" name="txtAnio" class="form-control">
-                    </p>
                     
-                    <p align="center">
-                        <input type="submit" value="Almacenar Mascota" name="btnAlmacenarVacuna"  class="btn btn-dark" >
+                    <p>
+                        <label for="id">Id Mascota:</label>
+                        <input type="text" class = "form-control" name="id" value="<?php echo $resultadoFiltrado['idMascota']?>" readonly="readonly">
                     </p>
+                    <p>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class = "form-control" name="nombre" value="<?php echo $resultadoFiltrado['nombre']?>" readonly="readonly">
+                    </p>
+                    <p>
+                        <label for="vacuna">Vacuna:</label>
+                        <input type="text" class = "form-control" name="vacuna">
+                    </p>    
+                    <p>
+                        <label for="anio">Año:</label>
+                        <input type="text" class = "form-control" name="anio">
+                    </p>        
+
+                    <p align="center">
+                        <input type="submit" class="btn btn-dark" value="AGREGAR VACUNA" name = "btnAlmacenarVacuna">
+                    </p>
+                            <?php
+                                }
+                            ?>
 
                 </form>
             </div>

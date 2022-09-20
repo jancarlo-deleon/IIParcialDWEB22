@@ -10,13 +10,17 @@
 <body>
 
 <!-- Barra de Navegacion> -->
-    <nav>
-        <ul>
-            <li> <a href="index.php">HOME</a></li>
-            <li> <a href="VistaAgregarMascota.php">Agregar Mascota</a></li>
-            <li> <a href="VistaListarMascota.php">Listar Mascota</a></li>
-        </ul>
-    </nav>
+<div>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="">HOME</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="VistaAgregarMascota.php">Agregar Mascota</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="VistaListarMascota.php">Listar Mascota</a></li>
+            </ul>
+
+        </nav>
+    </div>
 <!---------------------------------------------------------------------------->
 
 <p align="center">
