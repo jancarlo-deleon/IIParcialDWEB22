@@ -42,7 +42,7 @@
                     <td style="text-align: center;">  <?php echo $Mascotas['idMascota'] ?> </td>
                     <td style="text-align: center;">  <?php echo $Mascotas['nombre'] ?> </td>
                     <td style="text-align: center;">
-                    <a href="VistaAgregarVacuna.php?idEst=<?php echo $Mascotas['idMascota'];?>"><img alt="Agregar Vacuna" src="IconoVacuna.png">
+                    <a href="VistaAgregarVacuna.php?idEst=<?php echo $Mascotas['idMascota'];?>"><img alt="Agregar Vacuna" src="iconoVacuna.png">
                     </td>
                     <td style="text-align: center;">
                     <a href="VistaEditarMascota.php?idEst=<?php echo $Mascotas['idMascota'];?>"><img alt="Editar Mascota" src="IconoEditar.png">
