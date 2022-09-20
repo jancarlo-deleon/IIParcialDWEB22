@@ -19,7 +19,7 @@
 
         </nav>
     </div>
-    <form action="mascotacontroller.php" method="POST">
+    <form action="MascotaController.php" method="POST">
                         <?php
                             include_once "MascotaModel.php";
                             $nuevoEstudiante = new Mascota();
