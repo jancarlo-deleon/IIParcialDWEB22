@@ -45,7 +45,7 @@ public function ListarMascotas()
       $nuevaConexion = new conexion();
       $nuevoComando = $nuevaConexion->Conectar();
       $nuevoComando->query("Update Mascotas set nombre="."'".$nom."' where idMascota = $id");
-      header("Location: VistaListarMascota.php");
+      header('Location: VistaListarMascota.php');
     }
 
 
